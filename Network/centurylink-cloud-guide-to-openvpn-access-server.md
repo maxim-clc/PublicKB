@@ -1,6 +1,6 @@
 {{{
   "title": "CenturyLink Cloud Guide to Openvpn Access Server",
-  "date": "11-10-2015",
+  "date": "11-11-2015",
   "author": "Chris Little",
   "attachments": [],
   "contentIsHTML": false,
@@ -9,21 +9,21 @@
 
 ### Table of Contents
 
-* [Overview](#Overview)
-* [Prerequisites](#Prerequisites)
-* [Exceptions](#Exceptions)
-* [Use Cases](#Use-Cases)
-* [Reserving Client VPN DHCP Pool in the Control Portal](#Reserving-Client-VPN-DHCP-Pool-in-the-Control-Portal)
-* [Base Appliance Configuration](#Base-Appliance-Configuration)
-* [Performing Updates and Upgrades](#Performing-Updates-and-Upgrades)
-* [Implementing High Availability](#Implementing-High-Availability)
-* [Configure Server Network Settings](#Configure-Server-Network-Settings)
-* [Configuring Client VPN DHCP Pool](#Configuring-Client-VPN-DHCP-Pool)
-* [Adding Routes to CenturyLink Cloud VLANs](#Adding-Routes-to-CenturyLink-Cloud-VLANs)
-* [Configuring LDAP Authentication](#Configuring-LDAP-Authentication)
-* [Installing SSL Web Certificates](#Installing-SSL-Web-Certificates)
-* [Two Factor Authentication](#Two-Factor-Authentication)
-* [Connecting to Client VPN Services](#Connecting-to-Client-VPN-Services)
+* [Overview](#overview)
+* [Prerequisites](#prerequisites)
+* [Exceptions](#exceptions)
+* [Use Cases](#use-cases)
+* [Reserving Client VPN DHCP Pool in the Control Portal](#reserving-client-vpn-dhcp-pool-in-the-control-portal)
+* [Base Appliance Configuration](#base-appliance-configuration)
+* [Performing Updates and Upgrades](#performing-updates-and-upgrades)
+* [Implementing High Availability](#implementing-high-availability)
+* [Configure Server Network Settings](#configure-server-network-settings)
+* [Configuring Client VPN DHCP Pool](#configuring-client-vpn-dhcp-pool)
+* [Adding Routes to CenturyLink Cloud VLANs](#adding-routes-to-centurylink-cloud-vlans)
+* [Configuring LDAP Authentication](#configuring-ldap-authentication)
+* [Installing SSL Web Certificates](#installing-ssl-web-certificates)
+* [Two Factor Authentication](#two-factor-authentication)
+* [Connecting to Client VPN Services](#connecting-to-client-vpn-services)
 
 ### Overview
 OpenVPN Access Server is a full featured secure network tunneling VPN software solution that integrates OpenVPN server capabilities, enterprise management capabilities, simplified OpenVPN Connect UI, and OpenVPN Client software packages that accommodate Windows, MAC, Linux, Android, and iOS environments. OpenVPN Access Server supports a wide range of configurations, including secure and granular remote access to internal network and/ or private cloud network resources and applications with fine-grained access control.
@@ -390,11 +390,7 @@ While there are various authentication methods (Local, PAM, Radius, LDAP) this e
     * Create (or add existing) domain users to the VPN-Users Group
     * Create a VPN-Auth user with a secure password, set never to expire.  This will be used to do user/group lookups to the directory.  This is safer than using a domain administrator account.
 
-3. [Create a Firewall Rule](../Network/connecting-data-center-networks-through-firewall-policies.md) between the OpenVPN AS Primary, Secondary (if using HA) & Shared Virtual IP Address (if using HA) and the Active Directory Domain Controller(s).
-
-    **Source**|**Destination**|**Ports**
-    ----------|---------------|---------
-    Primary OpenVPN AS<br>Secondary OpenVPN AS<br>OpenVPN AS Shared Virtual IP|Microsoft Active Directory Domain Controller(s)|TCP/389<br>UDP/389
+3. [Create a Firewall Rule](../Network/connecting-data-center-networks-through-firewall-policies.md) between the OpenVPN AS Primary, Secondary (if using HA) & Shared Virtual IP Address (if using HA) and the Active Directory Domain Controller(s). **TIP: LDAP requires TCP/389 and UDP/389**
 
 4. Navigate to **Authentication > General** in the Web Admin UI.  Select **LDAP**, Choose **Save Settings**, followed by **Update Running Server.**
 
@@ -433,7 +429,7 @@ While there are various authentication methods (Local, PAM, Radius, LDAP) this e
     ![Validation Results](../images/centurylink-cloud-guide-to-openvpn-access-server-17.png)
 
 ### Two Factor Authentication
-There is a marketplace of Two Factor Authentication services that can be deployed in conjunction with OpenVPN Access Server.  Customers who wish to enable such features should evaluation the community to find the product that suites their needs not only for client vpn use but a larger corporate strategy for two factor authentication.  As an example use case, our teams setup two factor authentication using [Duo Security](//www.duosecurity.com) and leveraged their mobile phone applications.  While this guide isn't meant to be a complete configuration guide for [Duo Security](//www.duosecurity.com), a high level approach and diagram is detailed below.
+There is a marketplace of Two Factor Authentication services that can be deployed in conjunction with OpenVPN Access Server. Customers who wish to enable such features should evaluate the community to find the product that fits their needs, not only for client vpn use but a larger corporate strategy for two factor authentication.  As part of this KB, our teams setup two factor authentication using [Duo Security](//www.duosecurity.com) and leveraged their mobile phone applications.  While this guide isn't meant to be a complete configuration guide for [Duo Security](//www.duosecurity.com), a high level approach and diagram is detailed below.
 
 ![Duo OpenVPN high level diagram](../images/centurylink-cloud-guide-to-openvpn-access-server-22.png)
 

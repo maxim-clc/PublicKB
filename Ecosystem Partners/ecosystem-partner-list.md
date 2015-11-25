@@ -18,6 +18,7 @@ Quickly deploy and successfully use software and technology from any of our cert
 | [A10 vThunder](../Ecosystem Partners/Marketplace Guides/getting-started-with-a10-vthunder-partner-template.md)   	| Template    | Application service gateway    |
 | [Appcito CAFE](../Ecosystem Partners/Marketplace Guides/getting-started-with-appcito-cafe.md)   	| Blueprint    | Application delivery controller    |
 | [Cohesive Networks VNS3](../Ecosystem Partners/Marketplace Guides/getting-started-with-cohesiveft-vns3-partner-template.md)   	| Template    | Network security appliance    |
+| [FortyCloud](../Ecosystem Partners/Marketplace Guides/getting-started-with-fortycloud-appliance.md)   	| Blueprint (Virtual Appliance)    | Network security appliance    |
 | [LaGrange Systems CloudMaestro](../Ecosystem Partners/Marketplace Guides/getting-started-with-lagrange-systems-cloudmaestro-blueprint.md)   	| Blueprint    | Application Delivery Controller  |
 | [NGiNX](../Ecosystem Partners/Marketplace Guides/getting-started-with-nginx-blueprint.md)   	| Blueprint    | Web traffic manager    |
 | [OpenVPN AS](../Ecosystem Partners/Marketplace Guides/getting-started-with-openvpnas-appliance.md)   	| Blueprint (Virtual Appliance)    | Secure access manager    |
@@ -98,6 +99,7 @@ Quickly deploy and successfully use software and technology from any of our cert
 | [Pivotal GemFire](../Ecosystem Partners/Marketplace Guides/getting-started-with-pivotal-gemfire-blueprint.md)   	| Blueprint    | In-memory distributed database for high scale custom applications    |
 | [Pivotal Greenplum](../Ecosystem Partners/Marketplace Guides/getting-started-with-pivotal-greenplum-blueprint.md)   	| Blueprint    | Enterprise-grade analytical data warehouse    |
 | [Pivotal HD + HAWQ](../Ecosystem Partners/Marketplace Guides/getting-started-with-pivotal-hd-hawq.md)   	| Blueprint    | Enterprise-grade Hadoop cluster    |
+| [Qubida Analytics](../Ecosystem Partners/Marketplace Guides/getting-started-with-qubida-blueprint.md)   	| Blueprint    | Big Data BI    |
 | [XtremeData dbX](../Ecosystem Partners/Marketplace Guides/getting-started-with-xtremedata-dbx-blueprint.md)  | Blueprint  | On-Demand Big Data Analytics with real-time ingest |
 | [ZoomData](../Ecosystem Partners/Marketplace Guides/getting-started-with-zoomdata-blueprint.md)  | Blueprint  | Visual analytics of big data |
 
